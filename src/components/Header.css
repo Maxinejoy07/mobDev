@@ -1,0 +1,243 @@
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #d0e7ff;
+    /* Baby blue background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-family: Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.header:hover {
+    background-color: #c0dcf9;
+    /* Slightly darker baby blue on hover */
+}
+
+/* Logo Section */
+.logo a {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2a4a7b;
+    /* Darker blue for contrast */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo a:hover {
+    color: #6195d3;
+    /* Softer blue on hover */
+    transform: scale(1.05);
+    /* Subtle scale effect */
+}
+
+/* Navigation Links */
+.nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav a {
+    font-size: 16px;
+    color: #2a4a7b;
+    /* Darker blue */
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav a:hover {
+    background-color: #cce4f5;
+    /* Lighter blue on hover */
+    color: #3a6aa8;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+/* Underline Effect on Hover */
+.nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #6195d3;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::before {
+    width: 100%;
+    /* Underline appears on hover */
+}
+
+/* Search Bar */
+.search {
+    border: 1px solid #b3cde3;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 200px;
+    transition: width 0.3s ease, border-color 0.3s ease;
+    background-color: #f3faff;
+    outline: none;
+}
+
+.search:hover {
+    border-color: #6195d3;
+}
+
+.search:focus {
+    width: 260px;
+    border-color: #6195d3;
+}
+
+/* Icons Section */
+.icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon {
+    color: #2a4a7b;
+    /* Darker blue for icons */
+    font-size: 22px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #6195d3;
+    transform: scale(1.2);
+    /* Increased scale effect */
+}
+
+/* Add this to your Header.css */
+.icon {
+    position: relative;
+    font-size: 24px;
+    color: #2a4a7b;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #f00;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 14px;
+}
+
+/* Dropdown Navigation for Responsive Screens */
+.navbar-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 200px;
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.search:focus {
+    width: 300px;
+    /* Expand width on focus */
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.search-btn:hover {
+    color: #0056b3;
+}
+
+.search-btn i {
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+        display: none;
+        width: 100%;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+        color: #2a4a7b;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .icons {
+        margin-top: 10px;
+        justify-content: flex-end;
+        width: 100%;
+    }
+}
+
+/* Animation for Dropdown Menu */
+
+
+.navbar-toggle:hover {
+    color: #6195d3;
+}
+
+.nav.active {
+    animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,273 @@
+.testimonials {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 2.2em;
+}
+
+/* Comment Section */
+.comment-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Comment Form Inputs */
+.comment-input input,
+.comment-input textarea,
+.comment-input select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.comment-input textarea {
+    height: 100px;
+}
+
+.star-rating {
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 18px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star.filled {
+    color: gold;
+}
+
+.image-upload {
+    margin-top: 10px;
+}
+
+/* Submit Button */
+.send-button {
+    padding: 12px 25px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send-button:disabled {
+    background-color: #a0c4ff;
+    cursor: not-allowed;
+}
+
+.send-button:hover:enabled {
+    background-color: #0056b3;
+}
+
+/* Clear Button */
+.clear-button {
+    padding: 12px 25px;
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.clear-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007BFF;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Submitted Comments Section */
+.submitted-comments {
+    margin-top: 40px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    display: inline-block;
+    min-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testimonial-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.testimonial-quote {
+    font-style: italic;
+    color: #555;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+/* Scrollbar */
+.submitted-comments::-webkit-scrollbar {
+    height: 8px;
+}
+
+.submitted-comments::-webkit-scrollbar-thumb {
+    background: #007BFF;
+    border-radius: 10px;
+}
+
+.submitted-comments::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .testimonials {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .testimonial-card {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+        min-width: 100%;
+    }
+
+    .testimonial-photo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-name {
+        font-size: 1.1em;
+    }
+
+    .testimonial-quote {
+        font-size: 1em;
+    }
+
+    .comment-section {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
+.testimonial-card .testimonial-photo {
+    border: 2px solid #007BFF;
+}
+
+.comment-input {
+    border-top: 2px solid #007BFF;
+    padding-top: 20px;
+}
+
+.comment-input label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.comment-input input,
+.comment-input textarea {
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.comment-input input:focus,
+.comment-input textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Star Rating Styling */
+.star-rating {
+    font-size: 1.3em;
+    color: #FFD700;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.star-rating .star {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.star-rating .star:hover {
+    transform: scale(1.2);
+}

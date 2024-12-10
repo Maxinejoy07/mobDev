@@ -1,0 +1,452 @@
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background-image: url('https://media1.giphy.com/media/F6ZC06fX688qk/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    height: 700px;
+    margin: 20px auto;
+    width: 97%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+/* Hero Text and Product Styling */
+.hero-text,
+.hero-product {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Hero Text Styling */
+.hero-text {
+    max-width: 50%;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(81, 78, 78, 0.4);
+    line-height: 1.2;
+    animation: slideUp 1s ease-out;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* "Shop Now" Button Styling */
+.shop-now-btn {
+    padding: 30px 70px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 1s ease-out;
+}
+
+.shop-now-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.07);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Card Styling */
+.hero-product {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.product-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    padding: 25px;
+    max-width: 300px;
+    color: #333;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 1s ease-out;
+    flex: 1;
+    min-width: 270px;
+    height: 100%;
+}
+
+/* Hover Effects */
+.product-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sale Badge */
+.sale-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    animation: pulse 1s infinite alternate;
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Product Name */
+.product-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #333;
+    animation: fadeInUp 1.2s ease-out;
+    transition: color 0.2s ease;
+}
+
+/* Hover effect for Product Name */
+.product-card:hover .product-name {
+    color: #e74c3c;
+}
+
+/* Price Section */
+.product-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.original-price {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+
+.discounted-price {
+    color: #e74c3c;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: #2d87f0;
+    color: white;
+    padding: 14px 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: bounceIn 1.5s ease-out;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #1b5e9b;
+    transform: scale(1.05);
+    animation: pulse 0.5s infinite alternate;
+}
+
+/* Keyframes and Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .hero-product {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .product-card {
+        max-width: 300px;
+        flex: 1;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+    .product-name {
+        font-size: 1rem;
+    }
+
+    .product-price {
+        gap: 8px;
+    }
+
+    .original-price {
+        font-size: 0.9rem;
+    }
+
+    .discounted-price {
+        font-size: 1.1rem;
+    }
+
+    .add-to-cart-btn {
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-name {
+        font-size: 0.95rem;
+    }
+
+    .product-price {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .original-price {
+        font-size: 0.8rem;
+    }
+
+    .discounted-price {
+        font-size: 1rem;
+    }
+
+    .add-to-cart-btn {
+        padding: 12px 0;
+        font-size: 0.85rem;
+    }
+}
+
+/* Keyframes and Animations */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 40px;
+        height: auto;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .shop-now-btn {
+        padding: 12px 30px;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+}

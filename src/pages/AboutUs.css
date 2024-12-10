@@ -1,0 +1,267 @@
+/* Blog.css */
+
+/* General Styling */
+.blog-page {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}
+
+.blog-title {
+    font-size: 3em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: slideUp 1s ease-out;
+}
+
+.blog-description {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    font-style: italic;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* About Us Section */
+.about-us {
+    margin-bottom: 50px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    color: #3498db;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.about-us p,
+.values-list {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.values-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.values-list li {
+    margin-bottom: 10px;
+}
+
+/* Shoe Collection Section */
+.shoe-collection {
+    margin-bottom: 50px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.shoe-collection h2 {
+    font-size: 2.5em;
+    color: #3498db;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.collection-container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.collection-item {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1.4s ease-out forwards;
+}
+
+.collection-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.collection-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Shoe Care Tips Section */
+.shoe-care-tips {
+    margin-bottom: 50px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.shoe-care-tips h2 {
+    font-size: 2.5em;
+    color: #3498db;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.care-tips-list {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.7;
+    list-style-type: square;
+    padding-left: 30px;
+}
+
+.care-tips-list li {
+    margin-bottom: 15px;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 1.5s ease-out;
+}
+
+.call-to-action h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.cta-button {
+    background-color: #2980b9;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-out;
+}
+
+.cta-button:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2.2em;
+    }
+
+    .blog-description {
+        font-size: 1em;
+    }
+
+    .about-us h2,
+    .shoe-collection h2,
+    .shoe-care-tips h2 {
+        font-size: 2em;
+    }
+
+    .collection-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collection-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 15px 40px;
+    }
+}
